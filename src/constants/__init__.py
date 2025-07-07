@@ -18,9 +18,6 @@ FILE_NAME: str = "usvisa.csv"
 MODEL_FILE_NAME = "model.pkl"
 
 
-
-TARGET_COLUMN = "case_status"
-
 TARGET_COLUMN = "category"
 
 CURRENT_YEAR = date.today().year
