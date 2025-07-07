@@ -23,4 +23,7 @@ jinja2
 python-multipart
 nltk
 certifi
+flask
+flask_cors
+wordcloud
 #-e .
