@@ -5,6 +5,7 @@ import string
 import numpy as np
 import pandas as pd
 import nltk
+import pickle
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 # from tensorflow.keras.preprocessing.text import Tokenizer
@@ -99,6 +100,9 @@ class DataTransformation:
             vectore = CountVectorizer(max_features=1000)
             x_train_vectore = vectore.fit_transform(train_df['clean_comment']).toarray()
             x_test_vectore = vectore.transform(test_df['clean_comment']).toarray()
+
+            with open("vectore.pkl",'wb') as file:
+                pickle.dump(vectore,file)
 
             y_train = train_df[TARGET_COLUMN].values
             y_test = test_df[TARGET_COLUMN].values
